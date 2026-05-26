@@ -2811,7 +2811,7 @@ async function callAI(prompt, maxTokens){
     ? 'You are a JSON generator. Output ONLY raw JSON in English. All string values in natural English, single-line, no line breaks. No markdown, no prose.'
     : 'Você é um gerador de JSON. Responda APENAS com JSON puro em português do Brasil. Todos os valores de string em português natural, linha única, sem quebras. Sem markdown, sem prosa.';
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/generate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
